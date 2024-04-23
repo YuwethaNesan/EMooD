@@ -1,0 +1,138 @@
+/* camera icon button */
+.camera-btn {
+  margin-top: 4px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.camera-btn .fa-camera {
+  color: white;
+}
+
+.camera-btn:hover {
+  background: #3b3a3a;
+}
+
+/* main wrapper */
+.emotion-screen-wrapper {
+  position: fixed;
+  backdrop-filter: blur(15px);
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: auto;
+}
+
+.screen-close-btn {
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+.screen-close-btn .fa-close {
+  color: white;
+  font-size: 25px;
+}
+
+/* camera screen */
+.camera-screen .webcam-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.webcam {
+  position: relative;
+}
+
+.camera-indicator {
+  color: #3edd85;
+  font-size: 8px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.shutter-btn {
+  position: absolute;
+  top: 140px;
+  right: 15px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+.shutter-btn:hover {
+  border-color: #3edd85;
+  color: #3edd85 !important;
+}
+
+.shutter-btn .fa-camera {
+  color: inherit;
+  font-size: 20px;
+  rotate: 270deg;
+}
+
+/* loading screen */
+.loading-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  display: inline-block;
+  animation: animateDot 1s infinite steps(4);
+}
+
+@keyframes animateDot {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* capturedImage */
+.capturedImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.capturedImage img {
+  border-radius: 20px;
+}
+
+/* emotion-detection-result-screen */
+.emotion-detection-result-screen {
+  padding: 50px;
+}
+
+.emotion-detection-result-screen h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+.emotion-detection-result-screen h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}

@@ -1,7 +1,7 @@
 export const userReducer = (state = {}, action) => {
 
   switch (action.type) {
-
+//fetch user
   case "FETCH_USER_SUCCESS":
     return {
       ...state,

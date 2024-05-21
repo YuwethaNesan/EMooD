@@ -6,6 +6,8 @@ import { Provider } from "react-redux";
 import reducers from "./reducers";
 import App from "./App";
 
+require("dotenv").config();
+
 //create the redux store
 const store = createStore(
   reducers,

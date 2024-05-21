@@ -42,8 +42,9 @@ export default function EmotionDetection({
       });
       if (response.ok) {
         const data = await response.json();
-        await searchSongs(`Feel ${data[0]} tamil songs`, token);
-        setEmotion({ type: data[0], percentage: data[1] });
+        await searchSongs(`Feel ${data.emotion} tamil songs`, token);
+        setEmotion({ type: data.emotion, percentage: data.confidence_score
+        });
         setLoading(false);
       } else {
         throw new Error('Something went wrong');
@@ -92,3 +93,5 @@ export default function EmotionDetection({
     </div>
   );
 }
+
+

@@ -11,11 +11,11 @@ export default function SongsScreem({
   return (
     <div className="emotion-detection-result-screen">
       <h1>
-        Your face emotion looks like {type} with {percentage * 100}% confidence
+        Your face emotion looks like {type} with {Number(percentage).toFixed(2)}% confidence
       </h1>
 
       <h2 style={{ textAlign: 'center' }}>
-        I suggesting some songs for your mood...
+        Please find the playlist that I suggest for you based on your current mood...
       </h2>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <SongList
@@ -27,3 +27,4 @@ export default function SongsScreem({
     </div>
   );
 }
+
